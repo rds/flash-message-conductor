@@ -2,19 +2,19 @@
 
 module PlanetArgon 
   module FlashMessageConductor
-    FLASH_MESSAGE_TYPES = [ :error, :notice, :message ]
+    FLASH_MESSAGE_TYPES = [ :failure, :notice, :success ]
     
     module ControllerHelpers
-      def add_error(msg)
-        flash[:error] = msg
+      def add_failure(msg)
+        flash[:failure] = msg
       end
 
       def add_notice(msg)
         flash[:notice] = msg
       end
 
-      def add_message(msg)
-        flash[:message] = msg
+      def add_success(msg)
+        flash[:success] = msg
       end
     end
   
@@ -24,7 +24,7 @@ module PlanetArgon
         content_tag( "p", message, :class => "#{css_class}" )
       end
     
-      def render_flash_messages( div_id = "flash_messages", div_class = "" )
+      def render_flash_messages( div_id = "flash", div_class = "" )
         div_content = ''
         FLASH_MESSAGE_TYPES.each do |key|
           div_content << render_flash_message( key.to_s, flash[key] ) unless flash[key].blank?

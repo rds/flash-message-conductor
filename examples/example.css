@@ -2,26 +2,26 @@
 =Flash Messages
 ------------------------------------------------------------------------*/
 
-#flash_messages {
+#flash {
   padding: 8px;
   margin-bottom: 18px;
 }
 
-#flash_messages p {
+#flash p {
   margin-bottom: 0;
 }
 
-#flash_messages p.error {
+#flash p.failure {
   background: #fcc;
   border: 1px solid #f00;
 }
 
-#flash_messages p.notice {
+#flash p.notice {
   background: #fee37a;
   border: 1px solid #fd9b5b;
 }
 
-#flash_messages p.message {
+#flash p.success {
   background: #cbf285;
   border: 1px solid #3cab09;
 }

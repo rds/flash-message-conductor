@@ -9,17 +9,17 @@ Example
 
 # Controller helpers
 
-add_message( 'foo' )
+add_success( 'foo' )
 
 is the equivalent of
 
-flash[:message] = 'foo'
+flash[:success] = 'foo'
 
 Controller helpers included:
 
-add_message( message ) 
+add_success( message ) 
 add_notice( message )
-add_error( message )
+add_failure( message )
 
 # View helpers
 
@@ -27,14 +27,14 @@ add_error( message )
 
 produces:
 
-<div id="flash_messages">
-  <p class="message">You have successfully done XYZ...</p>
+<div id="flash">
+  <p class="success">You have successfully done XYZ...</p>
 </div>
 
-# or... if you set an error
+# or... if you set an failure
 
-<div id="flash_messages">
-  <p class="error">Oops! Something went bonkers!</p>
+<div id="flash">
+  <p class="failure">Oops! Something went bonkers!</p>
 </div>
 
 
